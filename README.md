@@ -24,39 +24,40 @@ Meu nome é Abel, tenho 18 anos e moro em Itaquaquecetuba. Quando eu comecei o c
 ---
 [![](https://visitcount.itsvg.in/api?id=Abel2007u&icon=0&color=0)](https://visitcount.itsvg.in)
 
----
 name: Generate snake animation
 
 on:
   schedule:
-    <!-- Executa a cada 12 horas -->
+    # Runs every 12 hours
     - cron: "0 */12 * * *"
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual trigger from the Actions tab
   push:
-  branches:
-      - main
+    branches:
+      - main # Triggers on push to the main branch
 
 jobs:
   generate:
+    # Permissions needed to write to the repository content
     permissions:
       contents: write
     runs-on: ubuntu-latest
     timeout-minutes: 5
-
 steps:
       - name: Generate snake.svg
+        # Uses the Platane/snk action to generate the snake SVG
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Abel2007u
+          # Specifies the output path and desired color palette (github-dark)
           outputs: dist/snake.svg?palette=github-dark
-
 - name: Push snake.svg to the output branch
+        # Uses crazy-max/ghaction-github-pages to push the generated file
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
-          target_branch: output
-          build_dir: dist
-        env:
+          target_branch: output # The branch where the SVG will be pushed
+          build_dir: dist       # The directory containing the generated file
+ env:
+          # GITHUB_TOKEN is automatically provided by GitHub Actions for repository write access
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
