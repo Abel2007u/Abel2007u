@@ -33,7 +33,7 @@ on:
     - cron: "0 */12 * * *"
   workflow_dispatch:
   push:
-    branches:
+  branches:
       - main
 
 jobs:
@@ -43,14 +43,14 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
-    steps:
+steps:
       - name: Generate snake.svg
         uses: Platane/snk/svg-only@v3
         with:
           github_user_name: Abel2007u
           outputs: dist/snake.svg?palette=github-dark
 
-      - name: Push snake.svg to the output branch
+- name: Push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
