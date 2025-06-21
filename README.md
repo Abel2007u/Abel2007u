@@ -44,7 +44,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
-    steps:
+ steps:
       - name: generate snake.svg
         uses: Platane/snk/svg-only@v3
         with:
@@ -52,7 +52,7 @@ jobs:
           outputs: dist/snake.svg?palette=github-dark
 
 
-      - name: push snake.svg to the output branch
+- name: push snake.svg to the output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
           target_branch: output
