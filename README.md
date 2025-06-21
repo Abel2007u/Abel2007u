@@ -24,7 +24,7 @@ Meu nome é Abel, tenho 18 anos e moro em Itaquaquecetuba. Quando eu comecei o c
 ---
 [![](https://visitcount.itsvg.in/api?id=Abel2007u&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<img src="https://raw.githubusercontent.com/1BrenoAlv/1BrenoAlv/output/snake.svg" alt="Snake animation" />
+<img src="https://raw.githubusercontent.com/Abel2007u/Abel2007u/output/snake.svg" alt="Snake animation or Animacao de Cobra" />
 
 <!--name: Generate snake animation
 on:
