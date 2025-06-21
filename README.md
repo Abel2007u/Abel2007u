@@ -26,8 +26,7 @@ Meu nome é Abel, tenho 18 anos e moro em Itaquaquecetuba. Quando eu comecei o c
 
 <img src="https://raw.githubusercontent.com/1BrenoAlv/1BrenoAlv/output/snake.svg" alt="Snake animation" />
 
-name: Generate snake animation
-
+<!--name: Generate snake animation
 on:
   schedule:
     # Runs every 12 hours
@@ -60,6 +59,6 @@ steps:
           build_dir: dist       # The directory containing the generated file
  env:
           # GITHUB_TOKEN is automatically provided by GitHub Actions for repository write access
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}    -->
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
